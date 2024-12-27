@@ -15,8 +15,7 @@ while machines.length > 0 do
 
   ax, ay = a_button_str.scan(/\d+/).map(&:to_i)
   bx, by = b_button_str.scan(/\d+/).map(&:to_i)
-  px, py =    prize_str.scan(/\d+/).map(&:to_i)
-
+  px, py =    prize_str.scan(/\d+/).map(&:to_i).map { |c| c + 10000000000000 }
 
   # A_presses = Integer * B_presses or vice_versa
   if equivalent_buttons?(ax, ay, bx, by)    
